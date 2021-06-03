@@ -4,7 +4,15 @@
 //ViewImageScreen
 //TurtleWolfe.com // //custom components
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native'
+
+// import { MaterialCommunityIcons } from "@expo/vector-icons";
+import defaultStyles from "../../constants/styles";
 
 interface ViewImageScreenProps {
   alpha?: string;
@@ -27,9 +35,13 @@ const ViewImageScreen: React.FC<ViewImageScreenProps> = ({
 }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {ViewImageScreen}
-      </Text>
+      <View style={styles.closeIcon}></View>
+      <View style={styles.deleteIcon}></View>
+      <Image
+        resizeMode="contain"
+        style={styles.image}
+        source={require("../../assets/images/chair.jpg")}
+      />
     </View>
   )
 }
@@ -37,10 +49,29 @@ const ViewImageScreen: React.FC<ViewImageScreenProps> = ({
 export default ViewImageScreen
 
 const styles = StyleSheet.create({
-  container: {
-
+  closeIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: defaultStyles.colors.primary,
+    position: "absolute",
+    top: 40,
+    left: 30,
   },
-  textContainer: {
-
+  container: {
+    backgroundColor: defaultStyles.colors.black,
+    flex: 1,
+    width: "100%",
+  },
+  deleteIcon: {
+    width: 50,
+    height: 50,
+    backgroundColor: defaultStyles.colors.secondary,
+    position: "absolute",
+    top: 40,
+    right: 30,
+  },
+  image: {
+    width: "100%",
+    height: "100%",
   },
 })
