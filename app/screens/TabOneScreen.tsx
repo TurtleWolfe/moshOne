@@ -43,7 +43,6 @@ export default function TabOneScreen() {
   return (
     <View style={styles.container}>
       {/* <Text style={styles.title}>Components</Text> */}
-      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <AppButton /> */}
       {/* <AppCard /> */}
       {/* <AppCategoryPickerItem /> */}
@@ -54,22 +53,22 @@ export default function TabOneScreen() {
       {/* <AppText /> */}
       {/* <AppTextInput /> */}
 
-      {/* <Text style={styles.title}>form Components</Text> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      {/* <Text style={styles.title}>form Components</Text> */}
       {/* <AppErrorMessage /> */}
       {/* <AppForm /> */}
       {/* <AppFormField /> */}
       {/* <AppFormPicker /> */}
       {/* <AppSubmitButton /> */}
 
-      {/* <Text style={styles.title}>list Components</Text> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      {/* <Text style={styles.title}>list Components</Text> */}
       {/* <AppListItem /> */}
       {/* <AppListItemDeleteAction /> */}
       {/* <AppListItemSeparator /> */}
 
-      {/* <Text style={styles.title}>component Screens</Text> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      {/* <Text style={styles.title}>component Screens</Text> */}
       {/* <AccountScreen /> */}
       {/* <ListingDetailsScreen /> */}
       {/* <ListingEditScreen /> */}
@@ -77,8 +76,8 @@ export default function TabOneScreen() {
       {/* <LoginScreen /> */}
       {/* <MessagesScreen /> */}
       {/* <RegisterScreen /> */}
-      <ViewImgageScreen />
-      {/* <WelcomeScreen /> */}
+      {/* <ViewImgageScreen /> */}
+      <WelcomeScreen />
       {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
     </View>
   );

@@ -84,9 +84,8 @@ import ViewImgageScreen from './componentScreens/ViewImageScreen';
 import WelcomeScreen from './componentScreens/WelcomeScreen';
 
 import defaultStyles from '../constants/styles';
-
+// upper lower break divide \\
 <Text style={styles.title}>Components</Text>
-<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 <AppButton />
 <AppCard />
 <AppCategoryPickerItem />
@@ -97,22 +96,22 @@ import defaultStyles from '../constants/styles';
 <AppText />
 <AppTextInput />
 
-<Text style={styles.title}>form Components</Text>
 <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+<Text style={styles.title}>form Components</Text>
 <AppErrorMessage />
 <AppForm />
 <AppFormField />
 <AppFormPicker />
 <AppSubmitButton />
 
-<Text style={styles.title}>list Components</Text>
 <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+<Text style={styles.title}>list Components</Text>
 <AppListItem />
 <AppListItemDeleteAction />
 <AppListItemSeparator />
 
-<Text style={styles.title}>component Screens</Text>
 <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+<Text style={styles.title}>component Screens</Text>
 <AccountScreen />
 <ListingDetailsScreen />
 <ListingEditScreen />
@@ -144,16 +143,16 @@ onPress={handlePress}
 [Fundamental Concepts #8 StyleSheet](https://codewithmosh.com/courses/887220/lectures/16617395 '3:21 merge styles')  
 [Fundamental Concepts #9 PlatForm](https://codewithmosh.com/courses/887220/lectures/16617395 '2:00 Platform.OS === "android" ? StatusBar.currentHeight : 0,')
 
-### [Layout #2 Dimensions](https://codewithmosh.com/courses/887220/lectures/16617488 'Dimensions.get("screen")')
+### [Layouts #2 Dimensions](https://codewithmosh.com/courses/887220/lectures/16617488 'Dimensions.get("screen")')
 
-[Layout #3 Detecting Orentation Changes](https://www.google.com 'useDimensions & useDeviceOrentation')  
+[Layouts #3 Detecting Orentation Changes](https://www.google.com 'useDimensions & useDeviceOrentation')  
 `CNTRL or CMND` (left & right arrows)  
-[react-native-community/hooks](https://github.com/react-native-community/hooks#usecameraroll '2:00 hooks, useCamerRoll')  
+[react-native-community/hooks](https://github.com/react-native-community/hooks#usecameraroll '2:00 hooks, useDimensions')  
 `npm install @react-native-community/hooks`  
-[Layout #4 FlexBox](https://www.google.com 'Alt Shift Down Arrow to copy code 2:00')  
-[Layout #5 FlexBox -Direction](https://www.google.com '1:23 Control Space')  
-[Layout #6 Flexbox-justifyContent](https://codewithmosh.com/courses/887220/lectures/16617484 '1:43 justifyContent: "space-evenly"')  
-[Layout #7 Flexbox-alignContent](https://codewithmosh.com/courses/887220/lectures/16617480 '2:33 alignContent: "center"')
+[Layouts #4 FlexBox](https://www.google.com 'Alt Shift Down Arrow to copy code 2:00')  
+[Layouts #5 FlexBox -Direction](https://www.google.com '1:23 Control Space')  
+[Layouts #6 Flexbox-justifyContent](https://codewithmosh.com/courses/887220/lectures/16617484 '1:43 justifyContent: "space-evenly"')  
+[Layouts #7 Flexbox-alignContent](https://codewithmosh.com/courses/887220/lectures/16617480 '2:33 alignContent: "center"')
 
 ### [Styles #5 Styling Texts](https://codewithmosh.com/courses/887220/lectures/16617561 'expo install expo-font (OTF)')
 

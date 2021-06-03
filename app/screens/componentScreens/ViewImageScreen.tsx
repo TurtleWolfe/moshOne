@@ -7,31 +7,31 @@ import React from 'react'
 import {
   Image,
   StyleSheet,
-  Text,
   View,
 } from 'react-native'
 
 // import { MaterialCommunityIcons } from "@expo/vector-icons";
-import defaultStyles from "../../constants/styles";
+// import defaultStyles from "../../constants/styles";
+import Colors from '../../constants/Colors';
 
 interface ViewImageScreenProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  ViewImageScreen?: string;
+  // alpha?: string;
+  // beta?: string;
+  // gamma?: string[];
+  // delta?: number;
+  // epsilon?: number[]
+  // zeta?: boolean;
+  // ViewImageScreen?: string;
 }
 
 const ViewImageScreen: React.FC<ViewImageScreenProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  ViewImageScreen = 'ViewImageScreen',
+  // alpha,
+  // beta,
+  // gamma,
+  // delta,
+  // epsilon,
+  // zeta,
+  // ViewImageScreen = 'ViewImageScreen',
 }) => {
   return (
     <View style={styles.container}>
@@ -46,32 +46,32 @@ const ViewImageScreen: React.FC<ViewImageScreenProps> = ({
   )
 }
 
-export default ViewImageScreen
-
 const styles = StyleSheet.create({
   closeIcon: {
-    width: 50,
+    backgroundColor: Colors.primary,
     height: 50,
-    backgroundColor: defaultStyles.colors.primary,
+    left: 30,
     position: "absolute",
     top: 40,
-    left: 30,
+    width: 50,
   },
   container: {
-    backgroundColor: defaultStyles.colors.black,
+    backgroundColor: Colors.black,
     flex: 1,
     width: "100%",
   },
   deleteIcon: {
-    width: 50,
+    backgroundColor: Colors.secondary,
     height: 50,
-    backgroundColor: defaultStyles.colors.secondary,
     position: "absolute",
-    top: 40,
     right: 30,
+    top: 40,
+    width: 50,
   },
   image: {
-    width: "100%",
     height: "100%",
+    width: "100%",
   },
 })
+
+export default ViewImageScreen
