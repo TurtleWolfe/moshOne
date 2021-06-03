@@ -4,7 +4,11 @@
 //AccountScreen
 //TurtleWolfe.com // //custom components
 import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import {
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native'
 
 interface AccountScreenProps {
   alpha?: string;
