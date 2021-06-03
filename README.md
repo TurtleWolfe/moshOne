@@ -85,7 +85,8 @@ import WelcomeScreen from './componentScreens/WelcomeScreen';
 
 import defaultStyles from '../constants/styles';
 
-//  App components
+<Text style={styles.title}>Components</Text>
+<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 <AppButton />
 <AppCard />
 <AppCategoryPickerItem />
@@ -96,19 +97,22 @@ import defaultStyles from '../constants/styles';
 <AppText />
 <AppTextInput />
 
-//  App form Components
+<Text style={styles.title}>form Components</Text>
+<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 <AppErrorMessage />
 <AppForm />
 <AppFormField />
 <AppFormPicker />
 <AppSubmitButton />
 
-//  App lists Components
+<Text style={styles.title}>list Components</Text>
+<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 <AppListItem />
 <AppListItemDeleteAction />
 <AppListItemSeparator />
 
-//  App component Screens
+<Text style={styles.title}>component Screens</Text>
+<View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
 <AccountScreen />
 <ListingDetailsScreen />
 <ListingEditScreen />
