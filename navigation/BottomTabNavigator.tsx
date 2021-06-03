@@ -9,10 +9,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../app/constants/Colors';
+// import defaultStyles from "../constants/styles";
+// import defaultStyles from "../app/constants/styles";
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../app/screens/TabOneScreen';
 import TabTwoScreen from '../app/screens/TabTwoScreen';
 import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+
+
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -22,7 +26,11 @@ export default function BottomTabNavigator() {
   return (
     <BottomTab.Navigator
       initialRouteName="TabOne"
-      tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+      tabBarOptions={{
+        activeTintColor: Colors[colorScheme].tint,
+        inactiveBackgroundColor: Colors.secondary,
+        activeBackgroundColor: Colors.primary,
+      }}>
       <BottomTab.Screen
         name="TabOne"
         component={TabOneNavigator}
@@ -57,7 +65,13 @@ function TabOneNavigator() {
       <TabOneStack.Screen
         name="TabOneScreen"
         component={TabOneScreen}
-        options={{ headerTitle: 'Tab One Title' }}
+        options={{
+          headerTitle: 'Tab One Title',
+          headerStyle: {
+            backgroundColor: Colors.secondary,
+          },
+
+        }}
       />
     </TabOneStack.Navigator>
   );
@@ -71,7 +85,13 @@ function TabTwoNavigator() {
       <TabTwoStack.Screen
         name="TabTwoScreen"
         component={TabTwoScreen}
-        options={{ headerTitle: 'Tab Two Title' }}
+        options={{
+          headerTitle: 'Tab Two Title',
+          headerStyle: {
+            backgroundColor: Colors.secondary,
+          },
+
+        }}
       />
     </TabTwoStack.Navigator>
   );
