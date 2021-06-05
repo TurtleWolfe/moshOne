@@ -17,6 +17,7 @@ interface AppCardProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: Element | React.ReactNode;
   AppCard?: string;
 }
 
@@ -27,24 +28,25 @@ const AppCard: React.FC<AppCardProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppCard</Text>,
   AppCard = 'AppCard',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppCard}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppCard
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppCard

@@ -17,6 +17,7 @@ interface AppListItemProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: Element | React.ReactNode;
   AppListItem?: string;
 }
 
@@ -27,24 +28,25 @@ const AppListItem: React.FC<AppListItemProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppListItem</Text>,
   AppListItem = 'AppListItem',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppListItem}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppListItem
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppListItem

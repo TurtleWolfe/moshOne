@@ -17,6 +17,7 @@ interface ListingDetailsScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: Element | React.ReactNode;
   ListingDetailsScreen?: string;
 }
 
@@ -27,24 +28,25 @@ const ListingDetailsScreen: React.FC<ListingDetailsScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default ListingDetailsScreen</Text>,
   ListingDetailsScreen = 'ListingDetailsScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {ListingDetailsScreen}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default ListingDetailsScreen
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default ListingDetailsScreen

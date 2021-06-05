@@ -17,6 +17,7 @@ interface AppButtonProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: Element | React.ReactNode;
   AppButton?: string;
 }
 
@@ -27,24 +28,25 @@ const AppButton: React.FC<AppButtonProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppButton</Text>,
   AppButton = 'AppButton',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppButton}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppButton
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppButton

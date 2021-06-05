@@ -41,40 +41,40 @@ import defaultStyles from '../constants/styles';
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Components</Text>
-      <AppButton />
-      <AppCard />
-      <AppCategoryPickerItem />
-      <AppIcon />
-      <AppPicker />
-      <AppPickerItem />
-      <AppScreen />
-      <AppText />
-      <AppTextInput />
+      {/* <Text style={styles.title}>Components</Text> */}
+      {/* <AppButton /> */}
+      {/* <AppCard /> */}
+      {/* <AppCategoryPickerItem /> */}
+      {/* <AppIcon /> */}
+      {/* <AppPicker /> */}
+      {/* <AppPickerItem /> */}
+      {/* <AppScreen /> */}
+      {/* <AppText /> */}
+      {/* <AppTextInput /> */}
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>form Components</Text>
-      <AppErrorMessage />
-      <AppForm />
-      <AppFormField />
-      <AppFormPicker />
-      <AppSubmitButton />
+      {/* <Text style={styles.title}>form Components</Text> */}
+      {/* <AppErrorMessage /> */}
+      {/* <AppForm /> */}
+      {/* <AppFormField /> */}
+      {/* <AppFormPicker /> */}
+      {/* <AppSubmitButton /> */}
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>list Components</Text>
+      {/* <Text style={styles.title}>list Components</Text> */}
       <AppListItem />
-      <AppListItemDeleteAction />
-      <AppListItemSeparator />
+      {/* <AppListItemDeleteAction /> */}
+      {/* <AppListItemSeparator /> */}
 
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>component Screens</Text>
-      <AccountScreen />
+      {/* <Text style={styles.title}>component Screens</Text> */}
+      {/* <AccountScreen /> */}
       {/* <ListingDetailsScreen /> */}
       {/* <ListingEditScreen /> */}
       {/* <ListingsScreen /> */}
-      <LoginScreen />
-      <MessagesScreen />
-      <RegisterScreen />
+      {/* <LoginScreen /> */}
+      {/* <MessagesScreen /> */}
+      {/* <RegisterScreen /> */}
       {/* <ViewImgageScreen /> */}
       {/* <WelcomeScreen /> */}
       {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   separator: {
-    marginVertical: 3,
+    marginVertical: 1,
     height: 1,
     width: '80%',
   },

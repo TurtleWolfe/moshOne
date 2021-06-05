@@ -14,8 +14,36 @@
 
 [React Native iOS Kit](https://github.com/callstack/react-native-ios-kit 'updated: 011-05-2020, users 58') & [docs](https://callstack.github.io/react-native-ios-kit/docs/installation.html 'docs') 58
 
-[Configuring the header bar](https://reactnavigation.org/docs/headers/ 'React Navigation')  
+## [Configuring the header bar](https://reactnavigation.org/docs/headers/ 'React Navigation')
+
 [component as prop](https://linguinecode.com/post/pass-react-component-as-prop-with-typescript 'How to pass a React component as prop with TypeScript')
+
+Components List:
+![list of components](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png 'TabTwo Outline')
+
+## [user Snippets:](https://codewithmosh.com/courses/887220/ 'Mosh HameDani')
+
+## [tabs template & load Fonts async:](https://turtlewolfe.com/ 'TurtleWolfe.com')
+
+## [blank file ArchitecSure:](https://turtlewolfe.com/ 'TurtleWolfe.com')
+
+```bash
+# assets
+# components
+# constants
+# screens
+
+README.md
+```
+
+Merge with Expo:
+![merge with Expo file structure](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Expo's default TypeScript Tabs")
+
+## [merge rn Elements:](https://reactnativeelements.com/docs/text 'merge react native elements with custom components')
+
+## [app Dice:](https://turtlewolfe.com/ 'TurtleWolfe.com')
+
+### [StoryBook ReactNative 6.2:](https://github.com/storybookjs/react-native 'React Native StoryBook 6.2')
 
 ```bash
 expo init --template expo-template-tabs@sdk-40 --npm

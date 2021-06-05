@@ -9,6 +9,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 
 import Colors from '../app/constants/Colors';
+import palette from '../app/constants/palette';
 // import defaultStyles from "../constants/styles";
 // import defaultStyles from "../app/constants/styles";
 import useColorScheme from '../hooks/useColorScheme';
@@ -28,8 +29,8 @@ export default function BottomTabNavigator() {
       initialRouteName="TabOne"
       tabBarOptions={{
         activeTintColor: Colors[colorScheme].tint,
-        inactiveBackgroundColor: Colors.secondary,
-        activeBackgroundColor: Colors.primary,
+        inactiveBackgroundColor: palette.secondary,
+        activeBackgroundColor: palette.primary,
       }}>
       <BottomTab.Screen
         name="TabOne"
@@ -68,7 +69,7 @@ function TabOneNavigator() {
         options={{
           headerTitle: 'Tab One Title',
           headerStyle: {
-            backgroundColor: Colors.secondary,
+            backgroundColor: palette.secondary,
           },
 
         }}
@@ -88,7 +89,7 @@ function TabTwoNavigator() {
         options={{
           headerTitle: 'Tab Two Title',
           headerStyle: {
-            backgroundColor: Colors.secondary,
+            backgroundColor: palette.secondary,
           },
 
         }}
