@@ -201,17 +201,6 @@ Button 07?
 [Styles #15 ListItem Component](https://codewithmosh.com/courses/887220/lectures/16617550 '2:55 ') appListItem  
 [Styles #16 Improving the Image Screen](https://codewithmosh.com/courses/887220/lectures/16617564 'clever notes here about the Image screen') \_ ImageScreen
 
-<!-- Text   -->
-
-<!-- _improving Welcome Screen   -->
-<!-- Card   -->
-
-<!-- \_ Listing Details Screen 14 -->
-
-<!-- List Item   -->
-
-\_improving Image Screen 16
-
 05  
 Icon  
 ListItemDeleteAction  
