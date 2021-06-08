@@ -17,6 +17,7 @@ interface AppScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode[];
   AppScreen?: string;
 }
 
@@ -27,24 +28,25 @@ const AppScreen: React.FC<AppScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppScreen</Text>,
   AppScreen = 'AppScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppScreen}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppScreen
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppScreen

@@ -17,6 +17,7 @@ interface AppListItemDeleteActionProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode[];
   AppListItemDeleteAction?: string;
 }
 
@@ -27,24 +28,25 @@ const AppListItemDeleteAction: React.FC<AppListItemDeleteActionProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppListItemDeleteAction</Text>,
   AppListItemDeleteAction = 'AppListItemDeleteAction',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppListItemDeleteAction}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppListItemDeleteAction
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppListItemDeleteAction

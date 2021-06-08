@@ -17,6 +17,7 @@ interface MessagesScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode[];
   MessagesScreen?: string;
 }
 
@@ -27,24 +28,25 @@ const MessagesScreen: React.FC<MessagesScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default MessagesScreen</Text>,
   MessagesScreen = 'MessagesScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {MessagesScreen}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default MessagesScreen
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default MessagesScreen

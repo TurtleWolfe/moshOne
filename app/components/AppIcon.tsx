@@ -17,6 +17,7 @@ interface AppIconProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode[];
   AppIcon?: string;
 }
 
@@ -27,24 +28,25 @@ const AppIcon: React.FC<AppIconProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppIcon</Text>,
   AppIcon = 'AppIcon',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppIcon}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppIcon
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppIcon

@@ -17,6 +17,7 @@ interface AccountScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode[];
   AccountScreen?: string;
 }
 
@@ -27,24 +28,25 @@ const AccountScreen: React.FC<AccountScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AccountScreen</Text>,
   AccountScreen = 'AccountScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AccountScreen}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AccountScreen
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AccountScreen

@@ -17,6 +17,7 @@ interface AppListItemSeparatorProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode[];
   AppListItemSeparator?: string;
 }
 
@@ -27,24 +28,25 @@ const AppListItemSeparator: React.FC<AppListItemSeparatorProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppListItemSeparator</Text>,
   AppListItemSeparator = 'AppListItemSeparator',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppListItemSeparator}
+        {children}
       </Text>
     </View>
   )
 }
-
-export default AppListItemSeparator
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
 })
+
+export default AppListItemSeparator

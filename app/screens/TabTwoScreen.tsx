@@ -43,7 +43,7 @@ export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      {/* <Text style={styles.title}>Components</Text> */}
+      <Text style={styles.title}>Components</Text>
       {/* <AppButton /> */}
       {/* <AppCard /> */}
 
@@ -52,11 +52,12 @@ export default function TabTwoScreen() {
         subTitle='TabTwo'
         image={require('../assets/images/jacket.jpg')}
       /> */}
+
       {/* <AppCategoryPickerItem /> */}
-      {/* <AppIcon /> */}
+      <AppIcon />
       {/* <AppPicker /> */}
       {/* <AppPickerItem /> */}
-      {/* <AppScreen /> */}
+      <AppScreen />
       {/* <AppText /> */}
       {/* <AppTextInput /> */}
 
@@ -68,9 +69,8 @@ export default function TabTwoScreen() {
       {/* <AppFormPicker /> */}
       {/* <AppSubmitButton /> */}
 
-      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      {/* <Text style={styles.title}>list Components</Text> */}
-      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <Text style={styles.title}>list Components</Text>
       {/* <AppListItem /> */}
 
       {/* <AppListItem
@@ -85,19 +85,19 @@ export default function TabTwoScreen() {
         }
       /> */}
 
-      {/* <AppListItemDeleteAction /> */}
-      {/* <AppListItemSeparator /> */}
+      <AppListItemDeleteAction />
+      <AppListItemSeparator />
 
-      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      {/* <Text style={styles.title}>component Screens</Text> */}
-      {/* <AccountScreen /> */}
+      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <Text style={styles.title}>component Screens</Text>
+      <AccountScreen />
       {/* <ListingDetailsScreen /> */}
       {/* <ListingEditScreen /> */}
-      {/* <ListingsScreen /> */}
+      <ListingsScreen />
       {/* <LoginScreen /> */}
-      {/* <MessagesScreen /> */}
+      <MessagesScreen />
       {/* <RegisterScreen /> */}
-      <ViewImgageScreen />
+      {/* <ViewImgageScreen /> */}
       {/* <WelcomeScreen /> */}
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
