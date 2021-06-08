@@ -5,46 +5,35 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  Platform,
   StyleSheet,
   Text,
-  View,
 } from 'react-native'
 
 interface AppTextProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  AppText?: string;
+  children?: React.ReactNode[] | string;
+  style?: {};
 }
 
 const AppText: React.FC<AppTextProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  AppText = 'AppText',
+  children = <Text>default AppText in Charter Regular</Text>,
+  style,
 }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {AppText}
-      </Text>
-    </View>
-  )
+  return <Text style={[styles.text, style]}>{children}</Text>;
 }
-
-export default AppText
 
 const styles = StyleSheet.create({
   container: {
 
   },
-  textContainer: {
-
+  text: {
+    // backgroundColor: 'yellow',
+    fontSize: 18,
+    // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+    fontFamily: "CharterRegular",
+    // fontWeight: "300", should be a string not a number
+    // textDecorationLine: 'line-through'
   },
 })
+
+export default AppText

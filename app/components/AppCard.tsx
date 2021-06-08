@@ -5,47 +5,76 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  Image,
+  // ImageRequireSource,
+  // ImageSourcePropType,
+  // ImageURISource,
   StyleSheet,
-  Text,
   View,
 } from 'react-native'
 
+import AppText from "./AppText";
+import palette from '../constants/palette';
+
 interface AppCardProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: Element | React.ReactNode;
-  AppCard?: string;
+  title?: string;
+  subTitle?: string;
+  // image?: ImageURISource;
+  // image?: (id: string)=> void;
+  image?: string;
 }
 
 const AppCard: React.FC<AppCardProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppCard</Text>,
-  AppCard = 'AppCard',
+  title = 'default AppCard title',
+  subTitle = 'default AppCard subTitle in "Charter Bold Italic"',
+  image = require('../assets/images/Turtlewolfe.png'),
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
+    <View style={styles.card}>
+      <Image
+        style={styles.image}
+        source={image}
+      />
+      <View style={styles.detailsContainer}>
+        <AppText
+          style={styles.title}>
+          {title}
+        </AppText>
+        <AppText
+          style={styles.subTitle}>
+          {subTitle}
+        </AppText>
+      </View>
     </View>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-
+  card: {
+    backgroundColor: palette.primary,
+    borderRadius: 15,
+    marginBottom: 20,
+    overflow: "hidden",
+    width: "100%",
   },
-  textContainer: {
-    backgroundColor: 'yellow',
+  image: {
+    // backgroundColor: 'yellow',
+    backgroundColor: palette.secondary,
+    height: 200,
+    width: "100%",
+  },
+  detailsContainer: {
+    // backgroundColor: palette.lightGrey,
+    padding: 20,
+  },
+  title: {
+    marginBottom: 7,
+  },
+  subTitle: {
+    color: palette.secondary,
+    fontFamily: "CharterBoldItalic",
+    // fontFamily: "MonoSpace",
+    fontWeight: "900",
   },
 })
 

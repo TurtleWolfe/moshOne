@@ -10,9 +10,9 @@ import {
   View,
 } from 'react-native'
 
-// import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 // import defaultStyles from "../../constants/styles";
-import Colors from '../../constants/Colors';
+import Palette from '../../constants/palette';
 
 interface ViewImageScreenProps {
   // alpha?: string;
@@ -35,8 +35,21 @@ const ViewImageScreen: React.FC<ViewImageScreenProps> = ({
 }) => {
   return (
     <View style={styles.container}>
-      <View style={styles.closeIcon}></View>
-      <View style={styles.deleteIcon}></View>
+      <View style={styles.closeIcon}>
+        <MaterialCommunityIcons
+          name="close"
+          // color="white"
+          color={Palette.darkGrey}
+          size={35} />
+      </View>
+      <View style={styles.deleteIcon}>
+        <MaterialCommunityIcons
+          name="trash-can-outline"
+          // color="white"
+          color={Palette.darkGrey}
+          size={35}
+        />
+      </View>
       <Image
         resizeMode="contain"
         style={styles.image}
@@ -48,21 +61,25 @@ const ViewImageScreen: React.FC<ViewImageScreenProps> = ({
 
 const styles = StyleSheet.create({
   closeIcon: {
-    backgroundColor: Colors.primary,
+    alignItems: 'center',
+    backgroundColor: Palette.primary,
     height: 50,
+    justifyContent: 'center',
     left: 30,
     position: "absolute",
     top: 40,
     width: 50,
   },
   container: {
-    backgroundColor: Colors.black,
+    backgroundColor: Palette.black,
     flex: 1,
     width: "100%",
   },
   deleteIcon: {
-    backgroundColor: Colors.secondary,
+    alignItems: 'center',
+    backgroundColor: Palette.secondary,
     height: 50,
+    justifyContent: 'center',
     position: "absolute",
     right: 30,
     top: 40,

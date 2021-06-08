@@ -5,47 +5,61 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  GestureResponderEvent,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native'
 
+import palette from '../constants/palette';
+
 interface AppButtonProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: Element | React.ReactNode;
-  AppButton?: string;
+  color?: keyof typeof palette;
+  title?: string;
+  onPress?: (event: GestureResponderEvent) => void;
 }
 
 const AppButton: React.FC<AppButtonProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppButton</Text>,
-  AppButton = 'AppButton',
+  color = 'primary',
+  title = 'default App Button',
+  onPress = () => console.log('default AppButton'),
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
+    // <View style={styles.container}>
+    <TouchableOpacity
+      style={[styles.button, { backgroundColor: palette[color] }]}
+      onPress={onPress}
+    >
+      <Text
+        style={styles.text}>
+        {title}
       </Text>
-    </View>
+    </TouchableOpacity>
+    // </View> 
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-
+  // container: {
+  //   // backgroundColor: 'yellow',
+  // },
+  button: {
+    backgroundColor: palette.primary,
+    borderRadius: 25,
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 15,
+    width: "100%",
+    marginVertical: 10,
   },
-  textContainer: {
-    backgroundColor: 'yellow',
+  text: {
+    color: palette.white,
+    fontSize: 18,
+    textTransform: "uppercase",
+    // fontWeight: "bold",
+    fontWeight: "900",
+    fontFamily: "CharterBoldItalic",
   },
 })
 

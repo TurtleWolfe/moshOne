@@ -11,6 +11,7 @@ import {
   Text,
   View,
 } from 'react-native'
+import AppButton from "../../components/AppButton";
 
 import Colors from '../../constants/Colors';
 
@@ -42,12 +43,21 @@ const WelcomeScreen: React.FC<WelcomeScreenProps> = ({
       <View style={styles.logoContainer}>
         <Image
           style={styles.logo}
-          source={require("../../assets/images/logo-red.png")}
+          source={require("../../assets/images/Turtlewolfe.png")}
         />
-        <Text>Sell What You Don't Need</Text>
+        <Text style={styles.tagline}>https://TurtleWolfe.com</Text>
       </View>
-      <View style={styles.loginButton}></View>
-      <View style={styles.registerButton}></View>
+      <View style={styles.buttonsContainer}>
+        <AppButton
+          title="Login"
+          onPress={() => console.log('tapped Login Button')}
+        />
+        <AppButton
+          title="Register"
+          color="secondary"
+          onPress={() => console.log('tapped Register Button')}
+        />
+      </View>
     </ImageBackground>
   )
 }
@@ -61,9 +71,8 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     width: "100%",
   },
-  loginButton: {
-    backgroundColor: Colors.primary,
-    height: 70,
+  buttonsContainer: {
+    padding: 20,
     width: "100%",
   },
   logo: {
@@ -75,9 +84,12 @@ const styles = StyleSheet.create({
     position: "absolute",
     top: 70,
   },
-  registerButton: {
-    backgroundColor: Colors.secondary,
-    height: 70,
-    width: "100%",
+  tagline: {
+    // color: Colors.darkGrey,
+    color: 'dodgerblue',
+    fontFamily: 'CharterBoldItalic',
+    fontSize: 25,
+    fontWeight: "900",
+    paddingVertical: 20,
   },
 })

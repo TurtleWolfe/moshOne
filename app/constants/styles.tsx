@@ -1,12 +1,11 @@
 // import { Platform } from "react-native";
 
-import colors from '../constants/Colors'
-
+import palette from '../constants/palette'
 
 export default {
-  colors,
+  palette,
   text: {
-    color: colors.darkGrey,
+    color: palette.darkGrey,
     // placeholderTextColor: colors.primary,
     fontSize: 18,
     // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",

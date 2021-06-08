@@ -171,6 +171,10 @@ onPress={handlePress}
 [Fundamental Concepts #8 StyleSheet](https://codewithmosh.com/courses/887220/lectures/16617395 '3:21 merge styles')  
 [Fundamental Concepts #9 PlatForm](https://codewithmosh.com/courses/887220/lectures/16617395 '2:00 Platform.OS === "android" ? StatusBar.currentHeight : 0,')
 
+03  
+~~Welcom Screen~~  
+~~Image Screen~~
+
 ### [Layouts #2 Dimensions](https://codewithmosh.com/courses/887220/lectures/16617488 'Dimensions.get("screen")')
 
 [Layouts #3 Detecting Orentation Changes](https://www.google.com 'useDimensions & useDeviceOrentation')  
@@ -182,14 +186,40 @@ onPress={handlePress}
 [Layouts #6 Flexbox-justifyContent](https://codewithmosh.com/courses/887220/lectures/16617484 '1:43 justifyContent: "space-evenly"')  
 [Layouts #7 Flexbox-alignContent](https://codewithmosh.com/courses/887220/lectures/16617480 '2:33 alignContent: "center"')
 
+04
+
 ### [Styles #5 Styling Texts](https://codewithmosh.com/courses/887220/lectures/16617561 'expo install expo-font (OTF)')
 
 [https://github.com/react-native-training/react-native-fonts](https://github.com/react-native-training/react-native-fonts 'List of system fonts on iOS and Android: out of the box')  
-[Styles #6 Encapsulating Styles](https://codewithmosh.com/courses/887220/lectures/16617561 'rnsf Functional Component  imrn  2:00 {children} rnss - rn-stylesheet')  
+[Styles #6 Encapsulating Styles](https://codewithmosh.com/courses/887220/lectures/16617561 'rsf react stateless function  imrn  2:00 {children} 2:35 rnss - rn-stylesheet') appText  
 [https://icons.expo.fyi/](https://icons.expo.fyi/ 'expo.github.io/vector-icons/')  
+Button 07?  
 [Styles #8 Platform-Specific](https://codewithmosh.com/courses/887220/lectures/16617555 '...Platform (spread  2:00)')  
-[Styles #12 Improving the Welcome Screen](https://codewithmosh.com/courses/887220/lectures/16617564 '4:00 style={[styles.button, { backgroundColor: colors[color] }]}')  
-[Styles #13 Card Component](https://codewithmosh.com/courses/887220/lectures/16617550 'rnsf 4:00 {destructuring} 6:00 {require} 8:00 style={[styles.text, style]} 9:30 {overflow}')
+[Styles #12 Improving the Welcome Screen](https://codewithmosh.com/courses/887220/lectures/16617564 '4:00 style={[styles.button, { backgroundColor: colors[color] }]}') \_ WelcomeScreen  
+[Styles #13 Card Component](https://codewithmosh.com/courses/887220/lectures/16617550 'rnsf 4:00 {destructuring} 6:00 {require} 8:00 style={[styles.text, style]} 9:30 {overflow}') appCard [style array]  
+[Styles #14 Listing Details](https://codewithmosh.com/courses/887220/lectures/16617550 'clever notes here about the listing Details screen') \_ Listings Details Screen  
+[Styles #15 ListItem Component](https://codewithmosh.com/courses/887220/lectures/16617550 '2:55 ') appListItem  
+[Styles #16 Improving the Image Screen](https://codewithmosh.com/courses/887220/lectures/16617564 'clever notes here about the Image screen') \_ ImageScreen
+
+<!-- Text   -->
+
+<!-- _improving Welcome Screen   -->
+<!-- Card   -->
+
+<!-- \_ Listing Details Screen 14 -->
+
+<!-- List Item   -->
+
+\_improving Image Screen 16
+
+05  
+Icon  
+ListItemDeleteAction  
+ListItemSeperator  
+Screen  
+\_Account Screen  
+\_Listings Screen  
+\_Messages Screen
 
 ### [Lists #3 Extracting the Screen Component](https://codewithmosh.com/courses/887220/lectures/16687902 'paddingTop: Constants.statusBarHeight,')
 
@@ -201,10 +231,18 @@ onPress={handlePress}
 [Lists #13 Building the Account Screen](https://codewithmosh.com/courses/887220/lectures/16687953 '7:15 merging prop styles, style={[styles.screen, style] 8:00 breaks rule for re-usablity')  
 [Lists #14 Building the Listings Screen](https://codewithmosh.com/courses/887220/lectures/16687954 '3:15 subTitle={"$" + item.price} 5:00  </View style={style}>{children}</>')
 
+06  
+Picker  
+TextInput  
+Icon  
+PickerItem
+
 ### [Input Components # 3 Building a Pretty TextInput](https://codewithmosh.com/courses/887220/lectures/16762423 '3:15 conditional icon, 5:00 destructuring ({ icon, ...otherProps })')
 
 [Input Components #4 Extracting the Default Styles](https://codewithmosh.com/courses/887220/lectures/16762425 '2:00 style={defaultStyles.text} 3:00 defaultStyles.colors.lightGrey,')  
 [Input Components #6 Picker](https://codewithmosh.com/courses/887220/lectures/16762419 'expo install @react-native-community/datetimepicker')
+
+07
 
 ### [Forms #2 Building the Login Form](https://codewithmosh.com/courses/887220/lectures/16762473 '6:30 onChangeText={text => setEmail(text)}')
 
@@ -215,6 +253,8 @@ onPress={handlePress}
 [Forms #10 Organizing Components](https://codewithmosh.com/courses/887220/lectures/16762480 'moving to a forms folder')
 
 https://blog.logrocket.com/react-native-form-validations-with-formik-and-yup/
+
+08
 
 ### [ImproveMents #3 Handling Long Text](https://codewithmosh.com/courses/887220/lectures/16762519 '1:00 spread additonal props')
 

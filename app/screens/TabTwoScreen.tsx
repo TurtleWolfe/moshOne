@@ -37,13 +37,21 @@ import RegisterScreen from './componentScreens/RegisterScreen';
 import ViewImgageScreen from './componentScreens/ViewImageScreen';
 import WelcomeScreen from './componentScreens/WelcomeScreen';
 
+import Palette from '../constants/palette';
 import defaultStyles from '../constants/styles';
 export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <Text style={styles.title}>Components</Text> */}
       {/* <AppButton /> */}
       {/* <AppCard /> */}
+
+      {/* <AppCard
+        title='TabTwo'
+        subTitle='TabTwo'
+        image={require('../assets/images/jacket.jpg')}
+      /> */}
       {/* <AppCategoryPickerItem /> */}
       {/* <AppIcon /> */}
       {/* <AppPicker /> */}
@@ -52,7 +60,7 @@ export default function TabTwoScreen() {
       {/* <AppText /> */}
       {/* <AppTextInput /> */}
 
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <Text style={styles.title}>form Components</Text> */}
       {/* <AppErrorMessage /> */}
       {/* <AppForm /> */}
@@ -60,13 +68,27 @@ export default function TabTwoScreen() {
       {/* <AppFormPicker /> */}
       {/* <AppSubmitButton /> */}
 
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <Text style={styles.title}>list Components</Text> */}
-      <AppListItem />
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      {/* <AppListItem /> */}
+
+      {/* <AppListItem
+        image={require("../assets/images/favicon.png")}
+        title="Tab Two"
+        subTitle="tab 2 demo"
+        appListItem={
+          styles.appListItem
+        }
+        appListImage={
+          styles.applistImage
+        }
+      /> */}
+
       {/* <AppListItemDeleteAction /> */}
       {/* <AppListItemSeparator /> */}
 
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <Text style={styles.title}>component Screens</Text> */}
       {/* <AccountScreen /> */}
       {/* <ListingDetailsScreen /> */}
@@ -75,8 +97,9 @@ export default function TabTwoScreen() {
       {/* <LoginScreen /> */}
       {/* <MessagesScreen /> */}
       {/* <RegisterScreen /> */}
-      {/* <ViewImgageScreen /> */}
+      <ViewImgageScreen />
       {/* <WelcomeScreen /> */}
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <EditScreenInfo path="/screens/TabOneScreen.tsx" /> */}
     </View>
   );
@@ -87,13 +110,30 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    // backgroundColor: Palette.mediumGrey,
+    // padding: 20,
   },
+  // appListItem: {
+  //   backgroundColor: Palette.danger,
+  //   borderRadius: 50,
+  //   // height: 100,
+  //   // paddingLeft: 0,
+  //   padding: 7,
+  //   // width: 100,
+  // },
+  // applistImage: {
+  //   backgroundColor: Palette.highlight,
+  //   borderRadius: 50,
+  //   height: 100,
+  //   // marginRight: 30,
+  //   width: 100,
+  // },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
   },
   separator: {
-    marginVertical: 1,
+    marginVertical: 6,
     height: 1,
     width: '80%',
   },
