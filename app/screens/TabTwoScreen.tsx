@@ -43,7 +43,8 @@ export default function TabTwoScreen() {
   return (
     <View style={styles.container}>
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
-      <Text style={styles.title}>Components</Text>
+      {/* <AppListItemSeparator /> */}
+      {/* <Text style={styles.title}>Components</Text> */}
       {/* <AppButton /> */}
       {/* <AppCard /> */}
 
@@ -54,14 +55,24 @@ export default function TabTwoScreen() {
       /> */}
 
       {/* <AppCategoryPickerItem /> */}
-      <AppIcon />
+
+      {/* <AppIcon /> */}
+
+      {/* <AppIcon
+        name='email'
+        size={50}
+        backgroundColor='red'
+        iconColor='white'
+      /> */}
+
       {/* <AppPicker /> */}
       {/* <AppPickerItem /> */}
-      <AppScreen />
+      {/* <AppScreen /> */}
       {/* <AppText /> */}
       {/* <AppTextInput /> */}
 
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      {/* <AppListItemSeparator /> */}
       {/* <Text style={styles.title}>form Components</Text> */}
       {/* <AppErrorMessage /> */}
       {/* <AppForm /> */}
@@ -69,33 +80,45 @@ export default function TabTwoScreen() {
       {/* <AppFormPicker /> */}
       {/* <AppSubmitButton /> */}
 
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>list Components</Text>
+      {/* <AppListItemSeparator /> */}
+      {/* <Text style={styles.title}>list Components</Text> */}
+
       {/* <AppListItem /> */}
 
       {/* <AppListItem
-        image={require("../assets/images/favicon.png")}
-        title="Tab Two"
-        subTitle="tab 2 demo"
-        appListItem={
-          styles.appListItem
+        IconComponent={
+          // <AppIcon />
+          <AppIcon
+            name='email'
+            size={50}
+            backgroundColor='dodgerblue'
+            iconColor='yellow'
+          />
         }
+        image={require("../assets/images/favicon.png")}
         appListImage={
           styles.applistImage
         }
+        // title="Tab Two"
+        subTitle="tab 2 demo tab 2 demo"
+        // subTitle="tab 2 demo"
+        appListItem={
+          styles.appListItem
+        }
       /> */}
 
-      <AppListItemDeleteAction />
-      <AppListItemSeparator />
+      {/* <AppListItemDeleteAction /> */}
+      {/* <AppListItemSeparator /> */}
 
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <Text style={styles.title}>component Screens</Text>
-      <AccountScreen />
+      {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
+      {/* <AppListItemSeparator /> */}
+      {/* <Text style={styles.title}>component Screens</Text> */}
+      {/* <AccountScreen /> */}
       {/* <ListingDetailsScreen /> */}
       {/* <ListingEditScreen /> */}
       <ListingsScreen />
       {/* <LoginScreen /> */}
-      <MessagesScreen />
+      {/* <MessagesScreen /> */}
       {/* <RegisterScreen /> */}
       {/* <ViewImgageScreen /> */}
       {/* <WelcomeScreen /> */}
@@ -110,24 +133,27 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    // backgroundColor: Palette.mediumGrey,
+    backgroundColor: Palette.mediumGrey,
     // padding: 20,
   },
-  // appListItem: {
-  //   backgroundColor: Palette.danger,
-  //   borderRadius: 50,
-  //   // height: 100,
-  //   // paddingLeft: 0,
-  //   padding: 7,
-  //   // width: 100,
-  // },
-  // applistImage: {
-  //   backgroundColor: Palette.highlight,
-  //   borderRadius: 50,
-  //   height: 100,
-  //   // marginRight: 30,
-  //   width: 100,
-  // },
+  appListItem: {
+    // paddingLeft: 0,
+    // width: 100,
+    alignItems: 'center',
+    backgroundColor: Palette.danger,
+    borderRadius: 25,
+    height: 100,
+    justifyContent: 'center',
+    padding: 7,
+  },
+  applistImage: {
+    backgroundColor: Palette.highlight,
+    borderRadius: 25,
+    height: 50,
+    marginLeft: 10,
+    // margin: 20,
+    width: 50,
+  },
   title: {
     fontSize: 20,
     fontWeight: 'bold',

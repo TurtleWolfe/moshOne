@@ -4,48 +4,42 @@
 //AppScreen
 //TurtleWolfe.com // //custom components
 import React from 'react'
+// import Constants from "expo-constants";
 import {
+  SafeAreaView,
   StyleSheet,
   Text,
   View,
 } from 'react-native'
 
 interface AppScreenProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode[];
-  AppScreen?: string;
+  children?: React.ReactNode;
+  style?: {};
 }
 
 const AppScreen: React.FC<AppScreenProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
   children = <Text>default AppScreen</Text>,
-  AppScreen = 'AppScreen',
+  style,
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    // <View style={styles.container}>
+    <SafeAreaView style={[styles.screen, style]}>
+      <View style={style}>{children}</View>
+    </SafeAreaView>
+    // </View>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-
+    // backgroundColor: 'yellow',
+  },
+  screen: {
+    flex: 1,
+    // paddingTop: Constants.statusBarHeight,
+    width: '100%',
   },
   textContainer: {
-    backgroundColor: 'yellow',
   },
 })
 

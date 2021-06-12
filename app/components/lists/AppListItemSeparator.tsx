@@ -6,46 +6,29 @@
 import React from 'react'
 import {
   StyleSheet,
-  Text,
   View,
 } from 'react-native'
 
+import Palette from '../../constants/palette';
+
 interface AppListItemSeparatorProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode[];
-  AppListItemSeparator?: string;
 }
 
 const AppListItemSeparator: React.FC<AppListItemSeparatorProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppListItemSeparator</Text>,
-  AppListItemSeparator = 'AppListItemSeparator',
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <View style={styles.separator} />
+    // <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-
-  },
-  textContainer: {
-    backgroundColor: 'yellow',
+  separator: {
+    width: "80%",
+    height: 1,
+    // backgroundColor: Palette.mediumGrey,
+    backgroundColor: Palette.danger,
   },
 })
 

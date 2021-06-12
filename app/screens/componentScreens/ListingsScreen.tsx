@@ -5,47 +5,73 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  FlatList,
   StyleSheet,
   Text,
   View,
 } from 'react-native'
 
+import AppScreen from "../../components/AppScreen";
+import AppCard from "../../components/AppCard";
+import Palette from '../../constants/palette';
+
+const listings = [
+  {
+    id: 1,
+    title: "Red jacket for sale",
+    price: 100,
+    image: require("../../assets/images/Turtlewolfe.png"),
+  },
+  {
+    id: 2,
+    title: "Couch in great condition",
+    price: 200,
+    image: require("../../assets/images/couch.jpg"),
+  },
+  {
+    id: 3,
+    title: "Red jacket for sale",
+    price: 300,
+    image: require("../../assets/images/jacket.jpg"),
+  },
+  {
+    id: 4,
+    title: "Couch in great condition",
+    price: 400,
+    image: require("../../assets/images/couch.jpg"),
+  },
+];
+
 interface ListingsScreenProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode[];
-  ListingsScreen?: string;
+  data?: {}[];
+  // children?: React.ReactNode[];
 }
 
 const ListingsScreen: React.FC<ListingsScreenProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default ListingsScreen</Text>,
-  ListingsScreen = 'ListingsScreen',
+  data,
+  // children = <Text>default ListingsScreen</Text>,
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <AppScreen style={styles.screen}>
+      <FlatList
+        data={listings}
+        keyExtractor={(listing) => listing.id.toString()}
+        renderItem={({ item }) => (
+          <AppCard
+            title={item.title}
+            subTitle={"$" + item.price}
+            image={item.image}
+          />
+        )}
+      />
+    </AppScreen>
   )
 }
 
 const styles = StyleSheet.create({
-  container: {
-
-  },
-  textContainer: {
-    backgroundColor: 'yellow',
+  screen: {
+    padding: 7,
+    backgroundColor: Palette.lightGrey,
   },
 })
 

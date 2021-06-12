@@ -5,44 +5,47 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  // Pressable,
+  // PressableProps,
   StyleSheet,
-  Text,
+  // Text,
+  TouchableWithoutFeedback,
+  GestureResponderEvent,
   View,
 } from 'react-native'
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+import Palette from '../../constants/palette';
 
 interface AppListItemDeleteActionProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode[];
-  AppListItemDeleteAction?: string;
+  // onPress?: string;
+  // onPress?: PressableProps["onPress"];
+  onPress?: (event: GestureResponderEvent) => void;
 }
 
 const AppListItemDeleteAction: React.FC<AppListItemDeleteActionProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppListItemDeleteAction</Text>,
-  AppListItemDeleteAction = 'AppListItemDeleteAction',
+  onPress,
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.container}>
+        <MaterialCommunityIcons
+          name="trash-can"
+          size={35}
+          color={Palette.white}
+        />
+      </View>
+    </TouchableWithoutFeedback>
   )
 }
 
 const styles = StyleSheet.create({
   container: {
-
+    backgroundColor: Palette.danger,
+    width: 70,
+    // width: '100%',
+    justifyContent: "center",
+    alignItems: "center",
   },
   textContainer: {
     backgroundColor: 'yellow',

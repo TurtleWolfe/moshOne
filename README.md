@@ -201,24 +201,20 @@ Button 07?
 [Styles #15 ListItem Component](https://codewithmosh.com/courses/887220/lectures/16617550 '2:55 ') appListItem  
 [Styles #16 Improving the Image Screen](https://codewithmosh.com/courses/887220/lectures/16617564 'clever notes here about the Image screen') \_ ImageScreen
 
-05  
-Icon  
-ListItemDeleteAction  
-ListItemSeperator  
-Screen  
-\_Account Screen  
-\_Listings Screen  
-\_Messages Screen
+05
 
-### [Lists #3 Extracting the Screen Component](https://codewithmosh.com/courses/887220/lectures/16687902 'paddingTop: Constants.statusBarHeight,')
+### [Lists #2 FlatList](https://codewithmosh.com/courses/887220/lectures/16687902 'notes about flat list') \_appMessages Screen
 
+[Lists #3 Extracting the Screen Component](https://codewithmosh.com/courses/887220/lectures/16687902 'paddingTop: Constants.statusBarHeight,')\_appScreen  
+[Lists #4 Seperator](https://codewithmosh.com/courses/887220/lectures/16687902 'notes about flat list') appListItemSeperator  
 [Lists #5 Handling Selections](https://codewithmosh.com/courses/887220/lectures/16687899 '2:05 onPress={onPress}')  
 [Lists #6 Handling Swipes](https://codewithmosh.com/courses/887220/lectures/16687906 '2:25 Swipeable renderRightActions={renderRightActions} 3:38 returns a view')  
-[Lists #7 Deleting an Item](https://codewithmosh.com/courses/887220/lectures/16687900 '0:45 renderRightActions={() => ( </ListItemDeleteAction onPress={() => handleDelete(item)} /> )} 3:30 { useState }')  
+[Lists #7 Deleting an Item](https://codewithmosh.com/courses/887220/lectures/16687900 '0:45 renderRightActions={() => ( </ListItemDeleteAction onPress={() => handleDelete(item)} /> )} 3:30 { useState }') appListItemDeleteAction  
 [Lists #8 Implementing Pull to Refresh](https://codewithmosh.com/courses/887220/lectures/16687895 '0:45 const [refreshing, setRefreshing] = useState(false);')  
+[Lists #11 Building the Icon Component](https://codewithmosh.com/courses/887220/lectures/16687953 'fancy notes on building the icon component') Icon  
 [Lists #12 Extending the ListItem Component](https://codewithmosh.com/courses/887220/lectures/16687905 '1:15 Conditional rendering {image && </Image style={styles.image} source={image} />}')  
-[Lists #13 Building the Account Screen](https://codewithmosh.com/courses/887220/lectures/16687953 '7:15 merging prop styles, style={[styles.screen, style] 8:00 breaks rule for re-usablity')  
-[Lists #14 Building the Listings Screen](https://codewithmosh.com/courses/887220/lectures/16687954 '3:15 subTitle={"$" + item.price} 5:00  </View style={style}>{children}</>')
+[Lists #13 Building the Account Screen](https://codewithmosh.com/courses/887220/lectures/16687953 '7:15 merging prop styles, style={[styles.screen, style] 8:00 breaks rule for re-usablity 10:30 prop alias') \_Account Screen  
+[Lists #14 Building the Listings Screen](https://codewithmosh.com/courses/887220/lectures/16687954 '3:15 subTitle={"$" + item.price} 5:00  </View style={style}>{children}</>') \_Listings Screen
 
 06  
 Picker  
@@ -241,7 +237,7 @@ PickerItem
 [Forms #9 Building the Form Component](https://codewithmosh.com/courses/887220/lectures/16762474 '1:30 {() => <>{children}</>}')  
 [Forms #10 Organizing Components](https://codewithmosh.com/courses/887220/lectures/16762480 'moving to a forms folder')
 
-https://blog.logrocket.com/react-native-form-validations-with-formik-and-yup/
+[article about Formik & Yup](https://blog.logrocket.com/react-native-form-validations-with-formik-and-yup/ 'formik & yup')
 
 08
 

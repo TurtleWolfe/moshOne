@@ -16,7 +16,7 @@ interface AppTextProps {
 }
 
 const AppText: React.FC<AppTextProps> = ({
-  children = <Text>default AppText in Charter Regular</Text>,
+  children,
   style,
 }) => {
   return <Text style={[styles.text, style]}>{children}</Text>;

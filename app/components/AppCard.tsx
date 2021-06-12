@@ -14,7 +14,7 @@ import {
 } from 'react-native'
 
 import AppText from "./AppText";
-import palette from '../constants/palette';
+import Palette from '../constants/palette';
 
 interface AppCardProps {
   title?: string;
@@ -51,7 +51,7 @@ const AppCard: React.FC<AppCardProps> = ({
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: palette.primary,
+    // backgroundColor: Palette.primary,
     borderRadius: 15,
     marginBottom: 20,
     overflow: "hidden",
@@ -59,19 +59,19 @@ const styles = StyleSheet.create({
   },
   image: {
     // backgroundColor: 'yellow',
-    backgroundColor: palette.secondary,
+    backgroundColor: Palette.secondary,
     height: 200,
     width: "100%",
   },
   detailsContainer: {
-    // backgroundColor: palette.lightGrey,
+    // backgroundColor: Palette.lightGrey,
     padding: 20,
   },
   title: {
     marginBottom: 7,
   },
   subTitle: {
-    color: palette.secondary,
+    color: Palette.secondary,
     fontFamily: "CharterBoldItalic",
     // fontFamily: "MonoSpace",
     fontWeight: "900",
