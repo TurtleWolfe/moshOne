@@ -17,8 +17,9 @@ interface AppFormFieldProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   AppFormField?: string;
-}
+} // typeScript
 
 const AppFormField: React.FC<AppFormFieldProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const AppFormField: React.FC<AppFormFieldProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppFormField</Text>,
   AppFormField = 'AppFormField',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppFormField}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default AppFormField
+} // AppFormField component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for AppFormField
+
+export default AppFormField
+// default export of AppFormField

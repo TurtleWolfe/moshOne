@@ -17,8 +17,9 @@ interface RegisterScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   RegisterScreen?: string;
-}
+} // typeScript
 
 const RegisterScreen: React.FC<RegisterScreenProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const RegisterScreen: React.FC<RegisterScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default RegisterScreen</Text>,
   RegisterScreen = 'RegisterScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {RegisterScreen}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default RegisterScreen
+} // RegisterScreen component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for RegisterScreen
+
+export default RegisterScreen
+// default export of RegisterScreen

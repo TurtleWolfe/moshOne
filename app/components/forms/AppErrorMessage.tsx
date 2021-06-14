@@ -17,8 +17,9 @@ interface AppErrorMessageProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   AppErrorMessage?: string;
-}
+} // typeScript
 
 const AppErrorMessage: React.FC<AppErrorMessageProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const AppErrorMessage: React.FC<AppErrorMessageProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppErrorMessage</Text>,
   AppErrorMessage = 'AppErrorMessage',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppErrorMessage}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default AppErrorMessage
+} // AppErrorMessage component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for AppErrorMessage
+
+export default AppErrorMessage
+// default export of AppErrorMessage

@@ -17,8 +17,9 @@ interface LoginScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   LoginScreen?: string;
-}
+} // typeScript
 
 const LoginScreen: React.FC<LoginScreenProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const LoginScreen: React.FC<LoginScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default LoginScreen</Text>,
   LoginScreen = 'LoginScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {LoginScreen}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default LoginScreen
+} // LoginScreen component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for LoginScreen
+
+export default LoginScreen
+// default export of LoginScreen

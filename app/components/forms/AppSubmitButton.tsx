@@ -17,8 +17,9 @@ interface AppSubmitButtonProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   AppSubmitButton?: string;
-}
+} // typeScript
 
 const AppSubmitButton: React.FC<AppSubmitButtonProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const AppSubmitButton: React.FC<AppSubmitButtonProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppSubmitButton</Text>,
   AppSubmitButton = 'AppSubmitButton',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppSubmitButton}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default AppSubmitButton
+} // AppSubmitButton component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for AppSubmitButton
+
+export default AppSubmitButton
+// default export of AppSubmitButton

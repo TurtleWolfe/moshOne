@@ -17,8 +17,9 @@ interface AppFormPickerProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   AppFormPicker?: string;
-}
+} // typeScript
 
 const AppFormPicker: React.FC<AppFormPickerProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const AppFormPicker: React.FC<AppFormPickerProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppFormPicker</Text>,
   AppFormPicker = 'AppFormPicker',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppFormPicker}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default AppFormPicker
+} // AppFormPicker component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for AppFormPicker
+
+export default AppFormPicker
+// default export of AppFormPicker

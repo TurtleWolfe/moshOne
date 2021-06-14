@@ -17,8 +17,9 @@ interface AppFormProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   AppForm?: string;
-}
+} // typeScript
 
 const AppForm: React.FC<AppFormProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const AppForm: React.FC<AppFormProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default AppForm</Text>,
   AppForm = 'AppForm',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {AppForm}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default AppForm
+} // AppForm component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for AppForm
+
+export default AppForm
+// default export of AppForm

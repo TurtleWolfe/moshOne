@@ -17,8 +17,9 @@ interface ListingEditScreenProps {
   delta?: number;
   epsilon?: number[]
   zeta?: boolean;
+  children?: React.ReactNode;
   ListingEditScreen?: string;
-}
+} // typeScript
 
 const ListingEditScreen: React.FC<ListingEditScreenProps> = ({
   alpha,
@@ -27,24 +28,26 @@ const ListingEditScreen: React.FC<ListingEditScreenProps> = ({
   delta,
   epsilon,
   zeta,
+  children = <Text>default ListingEditScreen</Text>,
   ListingEditScreen = 'ListingEditScreen',
 }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}>
-        {ListingEditScreen}
+        {children}
       </Text>
     </View>
   )
-}
-
-export default ListingEditScreen
+} // ListingEditScreen component
 
 const styles = StyleSheet.create({
   container: {
 
   },
   textContainer: {
-
+    backgroundColor: 'yellow',
   },
-})
+}) // style sheet for ListingEditScreen
+
+export default ListingEditScreen
+// default export of ListingEditScreen
