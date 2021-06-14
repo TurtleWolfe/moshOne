@@ -1,4 +1,5 @@
-import * as React from 'react';
+// import * as React from 'react';
+import React, { useState } from 'react';
 import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
@@ -39,7 +40,16 @@ import WelcomeScreen from './componentScreens/WelcomeScreen';
 
 import Palette from '../constants/palette';
 import defaultStyles from '../constants/styles';
+
+const categories = [
+  { label: 'Furniture', value: 1 },
+  { label: 'Clothing', value: 2 },
+  { label: 'Cameras', value: 3 },
+]
+
 export default function TabTwoScreen() {
+  const [category, setCategory] = useState(categories[0]);
+
   return (
     <View style={styles.container}>
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
@@ -65,11 +75,24 @@ export default function TabTwoScreen() {
         iconColor='white'
       /> */}
 
-      {/* <AppPicker /> */}
+      <AppPicker
+        selectedItem={category}
+        onSelectItem={(item: React.SetStateAction<undefined>) => setCategory(item)}
+        icon='email'
+        items={categories}
+        placeholder='Category'
+      />
+
       {/* <AppPickerItem /> */}
       {/* <AppScreen /> */}
       {/* <AppText /> */}
+
       {/* <AppTextInput /> */}
+
+      <AppTextInput
+        icon='email'
+        placeholder='User Name'
+      />
 
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <AppListItemSeparator /> */}
@@ -116,7 +139,7 @@ export default function TabTwoScreen() {
       {/* <AccountScreen /> */}
       {/* <ListingDetailsScreen /> */}
       {/* <ListingEditScreen /> */}
-      <ListingsScreen />
+      {/* <ListingsScreen /> */}
       {/* <LoginScreen /> */}
       {/* <MessagesScreen /> */}
       {/* <RegisterScreen /> */}

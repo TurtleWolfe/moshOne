@@ -5,46 +5,50 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  GestureResponderEvent,
   StyleSheet,
-  Text,
-  View,
+  TouchableOpacity,
 } from 'react-native'
 
+import AppText from "./AppText";
+
 interface AppPickerItemProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  AppPickerItem?: string;
-}
+  label?: string;
+  onPress?: (event: GestureResponderEvent) => void;
+  // gamma?: string[];
+  // delta?: number;
+  // epsilon?: number[]
+  // zeta?: boolean;
+  // AppPickerItem?: string;
+} // typeScript
 
 const AppPickerItem: React.FC<AppPickerItemProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  AppPickerItem = 'AppPickerItem',
+  label = "appPickerItem",
+  onPress = () => console.log('default appPickerItem'),
+  // gamma,
+  // delta,
+  // epsilon,
+  // zeta,
+  // AppPickerItem = 'AppPickerItem',
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {AppPickerItem}
-      </Text>
-    </View>
+    <TouchableOpacity onPress={onPress}>
+      <AppText style={styles.text}>{label}</AppText>
+    </TouchableOpacity>
   )
-}
-
-export default AppPickerItem
+} // app Picker Item component
 
 const styles = StyleSheet.create({
+  text: {
+    padding: 20,
+  },
   container: {
 
   },
   textContainer: {
 
   },
-})
+}) // style sheet for appPicker Item
+
+export default AppPickerItem
+// default export of app Picker Item

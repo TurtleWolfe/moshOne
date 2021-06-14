@@ -5,35 +5,36 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
-  Platform,
-  StyleSheet,
+  // Platform,
+  // StyleSheet,
   Text,
 } from 'react-native'
 
+import defaultStyles from "../constants/styles";
+
 interface AppTextProps {
-  children?: React.ReactNode[] | string;
+  children?: React.ReactNode;
   style?: {};
-}
+} // typeScript
 
 const AppText: React.FC<AppTextProps> = ({
   children,
   style,
 }) => {
-  return <Text style={[styles.text, style]}>{children}</Text>;
-}
-
-const styles = StyleSheet.create({
-  container: {
-
-  },
-  text: {
-    // backgroundColor: 'yellow',
-    fontSize: 18,
-    // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
-    fontFamily: "CharterRegular",
-    // fontWeight: "300", should be a string not a number
-    // textDecorationLine: 'line-through'
-  },
-})
+  return <Text style={[defaultStyles.text, style]}>{children}</Text>;
+} // appText Component
 
 export default AppText
+
+// const styles = StyleSheet.create({
+//   container: {
+//   },
+//   text: {
+//     // backgroundColor: 'yellow',
+//     fontSize: 18,
+//     // fontFamily: Platform.OS === "android" ? "Roboto" : "Avenir",
+//     fontFamily: "CharterRegular",
+//     // fontWeight: "300", should be a string not a number
+//     // textDecorationLine: 'line-through'
+//   },
+// }) // Style Sheet for appText

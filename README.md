@@ -65,6 +65,8 @@ expo install react-native-elements
 
 expo init oneTap --npm
 
+npm install @react-native-community/datetimepicker --legacy-peer-deps
+
 expo install yup
 expo install formik
 
@@ -216,16 +218,17 @@ Button 07?
 [Lists #13 Building the Account Screen](https://codewithmosh.com/courses/887220/lectures/16687953 '7:15 merging prop styles, style={[styles.screen, style] 8:00 breaks rule for re-usablity 10:30 prop alias') \_Account Screen  
 [Lists #14 Building the Listings Screen](https://codewithmosh.com/courses/887220/lectures/16687954 '3:15 subTitle={"$" + item.price} 5:00  </View style={style}>{children}</>') \_Listings Screen
 
-06  
-Picker  
-TextInput  
-Icon  
-PickerItem
+06
 
-### [Input Components # 3 Building a Pretty TextInput](https://codewithmosh.com/courses/887220/lectures/16762423 '3:15 conditional icon, 5:00 destructuring ({ icon, ...otherProps })')
+<!-- Icon   -->
+
+### [Input Components # 3 Building a Pretty TextInput](https://codewithmosh.com/courses/887220/lectures/16762423 '3:15 conditional icon, 5:00 destructuring ({ icon, ...otherProps })') TextInput
 
 [Input Components #4 Extracting the Default Styles](https://codewithmosh.com/courses/887220/lectures/16762425 '2:00 style={defaultStyles.text} 3:00 defaultStyles.colors.lightGrey,')  
-[Input Components #6 Picker](https://codewithmosh.com/courses/887220/lectures/16762419 'expo install @react-native-community/datetimepicker')
+[Input Components #6 Picker](https://codewithmosh.com/courses/887220/lectures/16762419 '1:30 expo install @react-native-community/datetimepicker') Picker  
+expo install @react-native-community/datetimepicker  
+[Input Components #7 PickerItem](https://codewithmosh.com/courses/887220/lectures/16762422 'custom notes on picker Item') PickerItem  
+[Input Components #8 Modal](https://codewithmosh.com/courses/887220/lectures/16762428 '1:00 Modal')
 
 07
 

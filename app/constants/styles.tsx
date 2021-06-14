@@ -1,6 +1,6 @@
 // import { Platform } from "react-native";
 
-import palette from '../constants/palette'
+import palette from './palette'
 
 export default {
   palette,

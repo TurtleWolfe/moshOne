@@ -6,45 +6,66 @@
 import React from 'react'
 import {
   StyleSheet,
-  Text,
+  TextInput,
+  // TextInputProps,
+  // PointPropType,
   View,
 } from 'react-native'
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+
+import defaultStyles from "../constants/styles";
 
 interface AppTextInputProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  AppTextInput?: string;
-}
+  icon?: React.ReactNode;
+  // gamma?: string[];
+  // delta?: number;
+  // epsilon?: number[]
+  // zeta?: boolean;
+  // children?: React.ReactNode;
+  // AppTextInput?: string;
+  // otherProps?: TextInputProps;
+  // otherProps?: PointPropType;
+  otherProps?: any;
+} // typeScript
 
 const AppTextInput: React.FC<AppTextInputProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  AppTextInput = 'AppTextInput',
+  icon,
+  // gamma,
+  // delta,
+  // epsilon,
+  // zeta,
+  // children = <Text>default AppTextInput</Text>,
+  // AppTextInput = 'AppTextInput',
+  ...otherProps
 }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {AppTextInput}
-      </Text>
+      {icon && (
+        <MaterialCommunityIcons
+          name={icon}
+          size={20}
+          color={defaultStyles.palette.mediumGrey}
+          style={styles.icon}
+        />
+      )}
+      <TextInput style={defaultStyles.text} {...otherProps} />
     </View>
   )
-}
-
-export default AppTextInput
+} // AppTextInput component
 
 const styles = StyleSheet.create({
   container: {
-
+    backgroundColor: defaultStyles.palette.lightGrey,
+    borderRadius: 25,
+    flexDirection: "row",
+    width: "100%",
+    padding: 15,
+    marginVertical: 10,
   },
-  textContainer: {
-
+  icon: {
+    marginRight: 10,
   },
-})
+}) // style sheet for AppTextInput
+
+export default AppTextInput
+// default export of AppTextInput
