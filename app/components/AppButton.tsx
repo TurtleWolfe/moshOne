@@ -17,7 +17,7 @@ import palette from '../constants/palette';
 interface AppButtonProps {
   color?: keyof typeof palette;
   title?: string;
-  onPress?: (event: GestureResponderEvent) => void;
+  onPress?: () => void;
 }
 
 const AppButton: React.FC<AppButtonProps> = ({

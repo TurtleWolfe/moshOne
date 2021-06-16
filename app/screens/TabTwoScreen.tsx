@@ -75,13 +75,13 @@ export default function TabTwoScreen() {
         iconColor='white'
       /> */}
 
-      <AppPicker
+      {/* <AppPicker
         selectedItem={category}
         onSelectItem={(item: React.SetStateAction<undefined>) => setCategory(item)}
         icon='email'
         items={categories}
         placeholder='Category'
-      />
+      /> */}
 
       {/* <AppPickerItem /> */}
       {/* <AppScreen /> */}
@@ -89,10 +89,10 @@ export default function TabTwoScreen() {
 
       {/* <AppTextInput /> */}
 
-      <AppTextInput
+      {/* <AppTextInput
         icon='email'
         placeholder='User Name'
-      />
+      /> */}
 
       {/* <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" /> */}
       {/* <AppListItemSeparator /> */}
@@ -138,7 +138,7 @@ export default function TabTwoScreen() {
       {/* <Text style={styles.title}>component Screens</Text> */}
       {/* <AccountScreen /> */}
       {/* <ListingDetailsScreen /> */}
-      {/* <ListingEditScreen /> */}
+      <ListingEditScreen />
       {/* <ListingsScreen /> */}
       {/* <LoginScreen /> */}
       {/* <MessagesScreen /> */}

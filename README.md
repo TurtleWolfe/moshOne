@@ -230,16 +230,28 @@ expo install @react-native-community/datetimepicker
 [Input Components #7 PickerItem](https://codewithmosh.com/courses/887220/lectures/16762422 'custom notes on picker Item') PickerItem  
 [Input Components #8 Modal](https://codewithmosh.com/courses/887220/lectures/16762428 '1:00 Modal')
 
-07
+07  
+~~app Form~~  
+~~app Form Field~~  
+app Form Picker  
+~~app Error Message~~  
+~~app Submit Button~~
 
-### [Forms #2 Building the Login Form](https://codewithmosh.com/courses/887220/lectures/16762473 '6:30 onChangeText={text => setEmail(text)}')
+\_~~ListingEditScreen~~  
+\_~~LoginScreen~~  
+\_~~LoginScreen~~  
+\_RegisterScreen
+
+### [Forms #2 Building the Login Form](https://codewithmosh.com/courses/887220/lectures/16762473 '6:30 onChangeText={text => setEmail(text)}') \_LoginScreen
 
 [Forms #3 Building Better Forms with Formik](https://codewithmosh.com/courses/887220/lectures/16762478 'expo install formik')  
 [Forms #4 Form Validation with Yup](https://codewithmosh.com/courses/887220/lectures/16762471 'expo install yup 2:30 Yup.matches()')  
-[Forms #7 Building the Field Component](https://codewithmosh.com/courses/887220/lectures/16762484 '4:30 spread operator')  
-[Forms #9 Building the Form Component](https://codewithmosh.com/courses/887220/lectures/16762474 '1:30 {() => <>{children}</>}')  
-[Forms #10 Organizing Components](https://codewithmosh.com/courses/887220/lectures/16762480 'moving to a forms folder')
-
+[Forms #5 Building the ErrorMessage Component](https://codewithmosh.com/courses/887220/lectures/16762472 'custom notes about the ErrorMessage Component') app Error Message  
+[Forms #7 Building the Field Component](https://codewithmosh.com/courses/887220/lectures/16762484 '4:30 spread operator') app Form Field  
+[Forms #8 Building the SubmitButton Component](https://codewithmosh.com/courses/887220/lectures/16762476 'custom notes about the SubmitButton Component') app Submit Button  
+[Forms #9 Building the Form Component](https://codewithmosh.com/courses/887220/lectures/16762474 '1:30 {() => <>{children}</>}') app Form  
+[Forms #10 Organizing Components](https://codewithmosh.com/courses/887220/lectures/16762480 'moving to a forms folder')  
+[Forms #12 Building the Listing Edit Screen](https://codewithmosh.com/courses/887220/lectures/16762479 'custom notes about the Building the Listing Edit Screen') \_ListingEditScreen  
 [article about Formik & Yup](https://blog.logrocket.com/react-native-form-validations-with-formik-and-yup/ 'formik & yup')
 
 08

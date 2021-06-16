@@ -4,50 +4,36 @@
 //AppFormPicker
 //TurtleWolfe.com // //custom components
 import React from 'react'
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import { useFormikContext } from "formik";
+
+import AppPicker from "../AppPicker";
+import ErrorMessage from "./AppErrorMessage";
 
 interface AppFormPickerProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode;
-  AppFormPicker?: string;
+  items?: any;
+  name?: any;
+  placeholder?: string;
 } // typeScript
 
 const AppFormPicker: React.FC<AppFormPickerProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppFormPicker</Text>,
-  AppFormPicker = 'AppFormPicker',
+  items,
+  name,
+  placeholder,
 }) => {
+  const { errors, setFieldValue, touched, values } = useFormikContext();
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <>
+      <AppPicker
+        items={items}
+        onSelectItem={(item) => setFieldValue(name, item)}
+        placeholder={placeholder}
+        selectedItem={values[name]}
+      />
+      <ErrorMessage error={errors[name]} visible={touched[name]} />
+    </>
   )
 } // AppFormPicker component
-
-const styles = StyleSheet.create({
-  container: {
-
-  },
-  textContainer: {
-    backgroundColor: 'yellow',
-  },
-}) // style sheet for AppFormPicker
 
 export default AppFormPicker
 // default export of AppFormPicker

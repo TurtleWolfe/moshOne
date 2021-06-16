@@ -6,47 +6,26 @@
 import React from 'react'
 import {
   StyleSheet,
-  Text,
-  View,
 } from 'react-native'
 
+import AppText from "../../components/AppText";
+
 interface AppErrorMessageProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode;
-  AppErrorMessage?: string;
+  error?: any;
+  visible?: boolean;
 } // typeScript
 
 const AppErrorMessage: React.FC<AppErrorMessageProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppErrorMessage</Text>,
-  AppErrorMessage = 'AppErrorMessage',
+  error,
+  visible,
 }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
-  )
+  if (!visible || !error) return null;
+
+  return <AppText style={styles.error}>{error}</AppText>;
 } // AppErrorMessage component
 
 const styles = StyleSheet.create({
-  container: {
-
-  },
-  textContainer: {
-    backgroundColor: 'yellow',
-  },
+  error: { color: "red" },
 }) // style sheet for AppErrorMessage
 
 export default AppErrorMessage

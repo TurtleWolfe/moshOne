@@ -5,10 +5,24 @@
 //TurtleWolfe.com // //custom components
 import React from 'react'
 import {
+  Image,
   StyleSheet,
   Text,
-  View,
+  // View,
 } from 'react-native'
+import * as Yup from "yup";
+
+import Screen from "../../components/AppScreen";
+import {
+  AppForm,
+  AppFormField,
+  AppSubmitButton
+} from "../../components/forms";
+
+const validationSchema = Yup.object().shape({
+  email: Yup.string().required().email().label("Email"),
+  password: Yup.string().required().min(4).label("Password"),
+});// .matches() for regular expression
 
 interface LoginScreenProps {
   alpha?: string;
@@ -32,20 +46,49 @@ const LoginScreen: React.FC<LoginScreenProps> = ({
   LoginScreen = 'LoginScreen',
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <Screen style={styles.container}>
+      <Image style={styles.logo}
+        source={require("../../assets/images/Turtlewolfe.png")} />
+
+      <AppForm
+        initialValues={{ email: "", password: "" }}
+        onSubmit={(values) => console.log(values)}
+        validationSchema={validationSchema}
+      >
+        <AppFormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          icon="email"
+          keyboardType="email-address"
+          name="email"
+          placeholder="Email"
+          textContentType="emailAddress"
+        />
+        <AppFormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          icon="lock"
+          name="password"
+          placeholder="Password"
+          secureTextEntry
+          textContentType="password"
+        />
+        <AppSubmitButton title="Login" />
+      </AppForm>
+    </Screen>
   )
 } // LoginScreen component
 
 const styles = StyleSheet.create({
   container: {
-
+    padding: 10,
   },
-  textContainer: {
-    backgroundColor: 'yellow',
+  logo: {
+    width: 80,
+    height: 80,
+    alignSelf: "center",
+    marginTop: 50,
+    marginBottom: 20,
   },
 }) // style sheet for LoginScreen
 

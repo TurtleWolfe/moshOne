@@ -4,50 +4,50 @@
 //AppFormField
 //TurtleWolfe.com // //custom components
 import React from 'react'
-import {
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native'
+import { useFormikContext } from "formik";
+
+import AppTextInput from "../AppTextInput";
+import ErrorMessage from "./AppErrorMessage";
 
 interface AppFormFieldProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode;
-  AppFormField?: string;
+  name?: string;
+  placeholder?: string;
+  keyboardType?: string;
+  maxLength?: number;
+  multiline?: boolean;
+  numberOfLines?: number;
+  otherProps?: {
+    // otherProps?: any;
+    // children?: React.ReactNode;
+  };
 } // typeScript
 
 const AppFormField: React.FC<AppFormFieldProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default AppFormField</Text>,
-  AppFormField = 'AppFormField',
+  name,
+  ...otherProps
 }) => {
+  const { setFieldTouched, handleChange, errors, touched } = useFormikContext();
+
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <>
+      <AppTextInput
+        onBlur={() => setFieldTouched(name)}
+        onChangeText={handleChange(name)}
+        {...otherProps}
+      />
+      <ErrorMessage error={errors[name]} visible={touched[name]} />
+    </>
   )
 } // AppFormField component
 
-const styles = StyleSheet.create({
-  container: {
+// const styles = StyleSheet.create({
+//   container: {
 
-  },
-  textContainer: {
-    backgroundColor: 'yellow',
-  },
-}) // style sheet for AppFormField
+//   },
+//   textContainer: {
+//     backgroundColor: 'yellow',
+//   },
+// }) // style sheet for AppFormField
 
 export default AppFormField
 // default export of AppFormField

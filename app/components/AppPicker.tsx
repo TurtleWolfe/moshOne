@@ -24,6 +24,7 @@ interface AppPickerProps {
   // icon?: typeof MaterialCommunityIcons;
   items?: { label: string; value: number; }[];
   onSelectItem?: any;
+  // onSelectItem?: () => void;
   placeholder?: string;
   selectedItem?: { label: string; value: number; };
   // zeta?: boolean;

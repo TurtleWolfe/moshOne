@@ -17,25 +17,15 @@ import defaultStyles from "../constants/styles";
 
 interface AppTextInputProps {
   icon?: React.ReactNode;
-  // gamma?: string[];
-  // delta?: number;
-  // epsilon?: number[]
-  // zeta?: boolean;
-  // children?: React.ReactNode;
-  // AppTextInput?: string;
-  // otherProps?: TextInputProps;
-  // otherProps?: PointPropType;
-  otherProps?: any;
+  onBlur?: () => void;
+  onChangeText?: (e: string | React.ChangeEvent<any>) => void;
+  otherProps?: {};
 } // typeScript
 
 const AppTextInput: React.FC<AppTextInputProps> = ({
   icon,
-  // gamma,
-  // delta,
-  // epsilon,
-  // zeta,
-  // children = <Text>default AppTextInput</Text>,
-  // AppTextInput = 'AppTextInput',
+  // onBlur,
+  // onChangeText,
   ...otherProps
 }) => {
   return (

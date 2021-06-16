@@ -6,47 +6,71 @@
 import React from 'react'
 import {
   StyleSheet,
-  Text,
-  View,
 } from 'react-native'
+import * as Yup from "yup";
 
+import Screen from "../../components/AppScreen";
+import {
+  AppForm as Form,
+  AppFormField as FormField,
+  AppSubmitButton,
+} from "../../components/forms";
+
+const validationSchema = Yup.object().shape({
+  name: Yup.string().required().label("Name"),
+  email: Yup.string().required().email().label("Email"),
+  password: Yup.string().required().min(4).label("Password"),
+});
 interface RegisterScreenProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode;
-  RegisterScreen?: string;
 } // typeScript
 
 const RegisterScreen: React.FC<RegisterScreenProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default RegisterScreen</Text>,
-  RegisterScreen = 'RegisterScreen',
 }) => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.textContainer}>
-        {children}
-      </Text>
-    </View>
+    <Screen style={styles.container}>
+      <Form
+        initialValues={{ name: "", email: "", password: "" }}
+        onSubmit={(values) => console.log(values)}
+        validationSchema={validationSchema}
+      >
+        <FormField
+          autoCorrect={false}
+          icon="account"
+          name="name"
+          placeholder="Name"
+        />
+        <FormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          icon="email"
+          keyboardType="email-address"
+          name="email"
+          placeholder="Email"
+          textContentType="emailAddress"
+        />
+        <FormField
+          autoCapitalize="none"
+          autoCorrect={false}
+          icon="lock"
+          name="password"
+          placeholder="Password"
+          secureTextEntry
+          textContentType="password"
+        />
+        <AppSubmitButton title="Register" />
+      </Form>
+    </Screen>
   )
 } // RegisterScreen component
 
 const styles = StyleSheet.create({
   container: {
+    padding: 10,
 
   },
-  textContainer: {
-    backgroundColor: 'yellow',
-  },
+  // textContainer: {
+  //   backgroundColor: 'yellow',
+  // },
 }) // style sheet for RegisterScreen
 
 export default RegisterScreen
