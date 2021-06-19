@@ -7,8 +7,6 @@ import React from 'react'
 import {
   Image,
   StyleSheet,
-  Text,
-  // View,
 } from 'react-native'
 import * as Yup from "yup";
 
@@ -25,25 +23,11 @@ const validationSchema = Yup.object().shape({
 });// .matches() for regular expression
 
 interface LoginScreenProps {
-  alpha?: string;
-  beta?: string;
-  gamma?: string[];
-  delta?: number;
-  epsilon?: number[]
-  zeta?: boolean;
-  children?: React.ReactNode;
-  LoginScreen?: string;
+  // alpha?: string;
 } // typeScript
 
 const LoginScreen: React.FC<LoginScreenProps> = ({
-  alpha,
-  beta,
-  gamma,
-  delta,
-  epsilon,
-  zeta,
-  children = <Text>default LoginScreen</Text>,
-  LoginScreen = 'LoginScreen',
+  // alpha,
 }) => {
   return (
     <Screen style={styles.container}>
@@ -56,22 +40,22 @@ const LoginScreen: React.FC<LoginScreenProps> = ({
         validationSchema={validationSchema}
       >
         <AppFormField
+          name="email"
+          placeholder="Email"
+          textContentType="emailAddress"
           autoCapitalize="none"
           autoCorrect={false}
           icon="email"
           keyboardType="email-address"
-          name="email"
-          placeholder="Email"
-          textContentType="emailAddress"
         />
         <AppFormField
+          name="password"
+          placeholder="Password"
+          textContentType="password"
           autoCapitalize="none"
           autoCorrect={false}
           icon="lock"
-          name="password"
-          placeholder="Password"
           secureTextEntry
-          textContentType="password"
         />
         <AppSubmitButton title="Login" />
       </AppForm>

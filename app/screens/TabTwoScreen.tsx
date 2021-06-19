@@ -1,5 +1,6 @@
 // import * as React from 'react';
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import EditScreenInfo from '../components/EditScreenInfo';
@@ -41,14 +42,14 @@ import WelcomeScreen from './componentScreens/WelcomeScreen';
 import Palette from '../constants/palette';
 import defaultStyles from '../constants/styles';
 
-const categories = [
-  { label: 'Furniture', value: 1 },
-  { label: 'Clothing', value: 2 },
-  { label: 'Cameras', value: 3 },
-]
+// const categories = [
+//   { label: 'Furniture', value: 1 },
+//   { label: 'Clothing', value: 2 },
+//   { label: 'Cameras', value: 3 },
+// ]
 
 export default function TabTwoScreen() {
-  const [category, setCategory] = useState(categories[0]);
+  // const [category, setCategory] = useState(categories[0]);
 
   return (
     <View style={styles.container}>
@@ -159,24 +160,24 @@ const styles = StyleSheet.create({
     backgroundColor: Palette.mediumGrey,
     // padding: 20,
   },
-  appListItem: {
-    // paddingLeft: 0,
-    // width: 100,
-    alignItems: 'center',
-    backgroundColor: Palette.danger,
-    borderRadius: 25,
-    height: 100,
-    justifyContent: 'center',
-    padding: 7,
-  },
-  applistImage: {
-    backgroundColor: Palette.highlight,
-    borderRadius: 25,
-    height: 50,
-    marginLeft: 10,
-    // margin: 20,
-    width: 50,
-  },
+  // appListItem: {
+  //   // paddingLeft: 0,
+  //   // width: 100,
+  //   alignItems: 'center',
+  //   backgroundColor: Palette.danger,
+  //   borderRadius: 25,
+  //   height: 100,
+  //   justifyContent: 'center',
+  //   padding: 7,
+  // },
+  // applistImage: {
+  //   backgroundColor: Palette.highlight,
+  //   borderRadius: 25,
+  //   height: 50,
+  //   marginLeft: 10,
+  //   // margin: 20,
+  //   width: 50,
+  // },
   title: {
     fontSize: 20,
     fontWeight: 'bold',

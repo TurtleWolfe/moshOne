@@ -56,7 +56,7 @@ const ListingEditScreen: React.FC<ListingEditScreenProps> = ({
         />
         <FormField
           keyboardType="numeric"
-          maxLength={8}
+          maxLength={8} // 10 000.99
           name="price"
           placeholder="Price"
         />

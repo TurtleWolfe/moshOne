@@ -16,7 +16,8 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import defaultStyles from "../constants/styles";
 
 interface AppTextInputProps {
-  icon?: React.ReactNode;
+  // icon?: React.ReactNode;
+  icon?: string;
   onBlur?: () => void;
   onChangeText?: (e: string | React.ChangeEvent<any>) => void;
   otherProps?: {};
@@ -38,7 +39,11 @@ const AppTextInput: React.FC<AppTextInputProps> = ({
           style={styles.icon}
         />
       )}
-      <TextInput style={defaultStyles.text} {...otherProps} />
+      <TextInput
+        placeholderTextColor={defaultStyles.palette.mediumGrey}
+        style={defaultStyles.text}
+        {...otherProps}
+      />
     </View>
   )
 } // AppTextInput component

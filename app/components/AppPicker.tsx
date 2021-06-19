@@ -27,9 +27,6 @@ interface AppPickerProps {
   // onSelectItem?: () => void;
   placeholder?: string;
   selectedItem?: { label: string; value: number; };
-  // zeta?: boolean;
-  // children?: React.ReactNode;
-  // AppPicker?: string;
 } // typeScript
 
 // const categories = [
@@ -44,9 +41,6 @@ const AppPicker: React.FC<AppPickerProps> = ({
   onSelectItem,
   placeholder,
   selectedItem,
-  // zeta,
-  // children = <Text>default AppPicker</Text>,
-  // AppPicker = 'AppPicker',
 }) => {
   const [modalVisible, setModalVisible] = useState(false);
 

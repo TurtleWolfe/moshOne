@@ -8,11 +8,14 @@ import { Formik } from "formik";
 
 
 interface AppFormProps {
+  // initialValues?: { email: string; password: string;};
   initialValues?: any;
+  // onSubmit?:() => void;
   onSubmit?: any;
-  validationSchema?: any;
+  // validationSchema?: any;
+  validationSchema?: {};//Yup.object()
   // children?: React.ReactNode;
-  children?: any;
+  children?: {};
 } // typeScript
 
 const AppForm: React.FC<AppFormProps> = ({

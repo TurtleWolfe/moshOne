@@ -10,16 +10,23 @@ import AppTextInput from "../AppTextInput";
 import ErrorMessage from "./AppErrorMessage";
 
 interface AppFormFieldProps {
+  // name?: string;
   name?: string;
-  placeholder?: string;
+  autoCapitalize?: string;
+  autoCorrect?: boolean;
+  icon?: string;
   keyboardType?: string;
   maxLength?: number;
   multiline?: boolean;
   numberOfLines?: number;
-  otherProps?: {
-    // otherProps?: any;
-    // children?: React.ReactNode;
-  };
+  placeholder?: string;
+  secureTextEntry?: boolean;
+  textContentType?: string;
+  otherProps?: {};
+  // {
+  //   otherProps?: any;
+  //   children?: React.ReactNode;
+  // };
 } // typeScript
 
 const AppFormField: React.FC<AppFormFieldProps> = ({
