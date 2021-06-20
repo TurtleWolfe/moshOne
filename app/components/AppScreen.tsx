@@ -24,7 +24,7 @@ const AppScreen: React.FC<AppScreenProps> = ({
   return (
     // <View style={styles.container}>
     <SafeAreaView style={[styles.screen, style]}>
-      <View style={style}>{children}</View>
+      <View style={[styles.view, style]}>{children}</View>
     </SafeAreaView>
     // </View>
   )
@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     // paddingTop: Constants.statusBarHeight,
     width: '100%',
   },
-  textContainer: {
+  view: {
+    flex: 1,
   },
 })
 

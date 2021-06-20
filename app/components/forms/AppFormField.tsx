@@ -22,6 +22,7 @@ interface AppFormFieldProps {
   placeholder?: string;
   secureTextEntry?: boolean;
   textContentType?: string;
+  width?: string | number;
   otherProps?: {};
   // {
   //   otherProps?: any;
@@ -31,6 +32,7 @@ interface AppFormFieldProps {
 
 const AppFormField: React.FC<AppFormFieldProps> = ({
   name,
+  width = '100%',
   ...otherProps
 }) => {
   const { setFieldTouched, handleChange, errors, touched } = useFormikContext();
@@ -40,6 +42,7 @@ const AppFormField: React.FC<AppFormFieldProps> = ({
       <AppTextInput
         onBlur={() => setFieldTouched(name)}
         onChangeText={handleChange(name)}
+        width={width}
         {...otherProps}
       />
       <ErrorMessage error={errors[name]} visible={touched[name]} />

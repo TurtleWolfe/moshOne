@@ -37,11 +37,15 @@ const AppCard: React.FC<AppCardProps> = ({
       />
       <View style={styles.detailsContainer}>
         <AppText
-          style={styles.title}>
+          style={styles.title}
+          numberOfLines={1}
+        >
           {title}
         </AppText>
         <AppText
-          style={styles.subTitle}>
+          style={styles.subTitle}
+          numberOfLines={3}
+        >
           {subTitle}
         </AppText>
       </View>

@@ -13,7 +13,13 @@ import {
 import AppText from "./AppText";
 
 interface AppPickerItemProps {
-  label?: string;
+  item?: {
+    // backgroundColor?: string;
+    // icon?: string;
+    label?: string;
+    value?: number;
+  };
+  // label?: string;
   onPress?: (event: GestureResponderEvent) => void;
   // gamma?: string[];
   // delta?: number;
@@ -23,7 +29,14 @@ interface AppPickerItemProps {
 } // typeScript
 
 const AppPickerItem: React.FC<AppPickerItemProps> = ({
-  label = "appPickerItem",
+
+  item = {
+    // background: 'black',
+    // icon: 'function',
+    label: 'appPickerItem',
+    value: 0
+  },
+  // label = "appPickerItem",
   onPress = () => console.log('default appPickerItem'),
   // gamma,
   // delta,
@@ -33,7 +46,7 @@ const AppPickerItem: React.FC<AppPickerItemProps> = ({
 }) => {
   return (
     <TouchableOpacity onPress={onPress}>
-      <AppText style={styles.text}>{label}</AppText>
+      <AppText style={styles.text}>{item.label}</AppText>
     </TouchableOpacity>
   )
 } // app Picker Item component

@@ -15,7 +15,7 @@ import AppScreen from "../../components/AppScreen";
 import AppListItem from "../../components/lists/AppListItem";
 import AppSeparator from "../../components/lists/AppListItemSeparator";
 import AppDeleteAction from "../../components/lists/AppListItemDeleteAction";
-import Palette from '../../constants/palette';
+// import Palette from '../../constants/palette';
 
 const initialMessages = [
   {
@@ -26,8 +26,8 @@ const initialMessages = [
   },
   {
     id: 2,
-    title: "T2",
-    description: "D2",
+    title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis rhoncus auctor. Aenean feugiat sem non est luctus pellentesque.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis rhoncus auctor. Aenean feugiat sem non est luctus pellentesque. Morbi aliquet dolor leo, quis pellentesque tortor varius et. Etiam volutpat nec enim a scelerisque. Praesent eget condimentum risus, vitae ornare turpis. Sed vel felis luctus, fringilla neque sit amet, egestas libero. Curabitur lobortis pulvinar hendrerit. Mauris ornare magna eu ante viverra iaculis. Quisque nec elementum lorem. Curabitur volutpat porta ligula, tristique scelerisque nibh posuere eget. Sed ac nunc nibh. Duis efficitur laoreet lorem eu eleifend. Duis rutrum fermentum aliquet. ",
     image: require("../../assets/images/Turtlewolfe.png"),
   },
   {
@@ -106,8 +106,8 @@ const MessagesScreen: React.FC<MessagesScreenProps> = ({
             },
             {
               id: 4,
-              title: "T4",
-              description: "D4",
+              title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis rhoncus auctor. Aenean feugiat sem non est luctus pellentesque.",
+              description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse lobortis rhoncus auctor. Aenean feugiat sem non est luctus pellentesque. Morbi aliquet dolor leo, quis pellentesque tortor varius et. Etiam volutpat nec enim a scelerisque. Praesent eget condimentum risus, vitae ornare turpis. Sed vel felis luctus, fringilla neque sit amet, egestas libero. Curabitur lobortis pulvinar hendrerit. Mauris ornare magna eu ante viverra iaculis. Quisque nec elementum lorem. Curabitur volutpat porta ligula, tristique scelerisque nibh posuere eget. Sed ac nunc nibh. Duis efficitur laoreet lorem eu eleifend. Duis rutrum fermentum aliquet. ",
               image: require("../../assets/images/Turtlewolfe.png"),
             },
           ]);

@@ -14,13 +14,15 @@ import {
   // Text,
   View,
 } from 'react-native'
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Swipeable from "react-native-gesture-handler/Swipeable";
 // import { TouchableOpacity } from 'react-native-gesture-handler';
 
-import AppText from "../../components/AppText";
-import AppDeleteAction from "../../components/lists/AppListItemDeleteAction";
-import Swipeable from "react-native-gesture-handler/Swipeable";
+import AppText from "../AppText";
+import AppDeleteAction from "./AppListItemDeleteAction";
 
-import Palette from '../../constants/palette';
+// import Palette from '../../constants/palette';
+import defaultStyles from "../../constants/styles";
 
 interface AppListItemProps {
   title?: string;
@@ -49,7 +51,7 @@ const AppListItem: React.FC<AppListItemProps> = ({
   return (
     <Swipeable renderRightActions={renderRightActions}>
       <TouchableHighlight
-        underlayColor={Palette.darkGrey}
+        underlayColor={defaultStyles.palette.darkGrey}
         onPress={onPress}>
         <View style={[styles.container, appListItem]}>
           {IconComponent}
@@ -59,14 +61,23 @@ const AppListItem: React.FC<AppListItemProps> = ({
               source={image} />}
           <View style={styles.detailsContainer}>
             {title && <AppText
-              style={styles.title}>
+              style={styles.title}
+              numberOfLines={1}
+            >
               {title}
             </AppText>}
             {subTitle && <AppText
-              style={styles.subTitle}>
+              style={styles.subTitle}
+              numberOfLines={3}
+            >
               {subTitle}
             </AppText>}
           </View>
+          <MaterialCommunityIcons
+            name={'chevron-right'}
+            color={defaultStyles.palette.danger}
+            size={55}
+          />
         </View>
       </TouchableHighlight>
     </Swipeable>
@@ -75,19 +86,21 @@ const AppListItem: React.FC<AppListItemProps> = ({
 
 const styles = StyleSheet.create({
   container: {
+    alignItems: "center",
     flexDirection: "row",
-    backgroundColor: Palette.lightGrey,
+    backgroundColor: defaultStyles.palette.lightGrey,
     // paddingLeft: 10,
     padding: 15,
     width: '100%',
   },
   detailsContainer: {
+    flex: 1,
     justifyContent: "center",
     marginLeft: 10,
     // marginRight: 10,
   },
   image: {
-    backgroundColor: Palette.highlight,
+    backgroundColor: defaultStyles.palette.highlight,
     borderRadius: 35,
     height: 70,
     // marginRight: 10,
@@ -101,14 +114,14 @@ const styles = StyleSheet.create({
     // alignItems: "center",
   },
   title: {
-    color: Palette.black,
+    color: defaultStyles.palette.black,
     fontFamily: 'CharterBoldItalic',
     // fontSize: 20,
     fontWeight: '900',
     // marginVertical: 10,
   },
   subTitle: {
-    color: Palette.mediumGrey,
+    color: defaultStyles.palette.mediumGrey,
     fontFamily: 'CharterBoldItalic',
     // fontSize: 25,
     fontWeight: '900',

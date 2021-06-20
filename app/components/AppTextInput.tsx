@@ -18,8 +18,10 @@ import defaultStyles from "../constants/styles";
 interface AppTextInputProps {
   // icon?: React.ReactNode;
   icon?: string;
+  numberOfLines?: number;
   onBlur?: () => void;
   onChangeText?: (e: string | React.ChangeEvent<any>) => void;
+  width?: number | string;
   otherProps?: {};
 } // typeScript
 
@@ -27,10 +29,11 @@ const AppTextInput: React.FC<AppTextInputProps> = ({
   icon,
   // onBlur,
   // onChangeText,
+  width = '100%',
   ...otherProps
 }) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { width }]}>
       {icon && (
         <MaterialCommunityIcons
           name={icon}
@@ -53,7 +56,7 @@ const styles = StyleSheet.create({
     backgroundColor: defaultStyles.palette.lightGrey,
     borderRadius: 25,
     flexDirection: "row",
-    width: "100%",
+    // width: "100%",
     padding: 15,
     marginVertical: 10,
   },

@@ -14,14 +14,23 @@ import defaultStyles from "../constants/styles";
 
 interface AppTextProps {
   children?: React.ReactNode;
+  numberOfLines?: number;
   style?: {};
+  otherProps?: {};
 } // typeScript
 
 const AppText: React.FC<AppTextProps> = ({
   children,
   style,
+  ...otherProps
 }) => {
-  return <Text style={[defaultStyles.text, style]}>{children}</Text>;
+  return (
+    <Text
+      style={[defaultStyles.text, style]}
+      {...otherProps}
+    >
+      {children}
+    </Text >)
 } // appText Component
 
 export default AppText
